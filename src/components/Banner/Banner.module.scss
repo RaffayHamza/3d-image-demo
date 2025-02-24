@@ -1,0 +1,40 @@
+.bannerContainer {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjusted height to accommodate the images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .mesh {
+    transition: transform 0.3s ease;
+  }
+  
+  .mesh:hover {
+    transform: scale(1.1);
+  }
+  
