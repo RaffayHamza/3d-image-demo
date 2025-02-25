@@ -202,7 +202,7 @@ const HEICTo3D = () => {
 
       <select onChange={(e) => setMode(e.target.value)} className={styles.modeSelector}>
         <option value="cross-eye">Cross-Eye Mode</option>
-        <option value="vr">VR Mode</option>
+        <option value="vr">Apple Vision Pro</option>
         <option value="anaglyph">Anaglyph (Red-Cyan Glasses)</option>
       </select>
 
