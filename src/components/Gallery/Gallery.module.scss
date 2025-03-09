@@ -24,12 +24,17 @@
   .image:hover {
     transform: scale(1.05);
   }
+
+  .gallery h1 {
+    color: white;
+  }
   
   /* Center "Loading images..." */
   .loadingText {
     text-align: center;
     font-size: 18px;
     width: 100%;
+    color: white;
   }
   
   /* Modal Styles */
