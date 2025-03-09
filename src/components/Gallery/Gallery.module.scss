@@ -1,0 +1,112 @@
+.gallery {
+    text-align: center;
+    margin-top: 150px;
+  }
+  
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: 30px;
+    padding: 20px;
+    justify-content: start;
+  }
+  
+  .galleryItem {
+    cursor: pointer;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  .image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Center "Loading images..." */
+  .loadingText {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .modalImage {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+  }
+  
+  /* Navigation Buttons */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background: white;
+  }
+  
+  /* Prevent background scrolling when modal is open */
+  body.modal-open {
+    overflow: hidden;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .gallery {
+      margin-top: 120px;
+    }
+    .galleryGrid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .galleryGrid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
+    }
+  }
+  
